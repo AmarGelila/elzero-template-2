@@ -102,6 +102,14 @@ input:disabled
     position: sticky;
     left: 0;
     top: 0;
+    overflow-y: scroll;
+}
+
+.page aside::-webkit-scrollbar{
+    display: none;
+}
+.page aside{
+    scrollbar-width: none;
 }
 .page aside h2
 {
@@ -1207,9 +1215,20 @@ main.courses .content
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
 }
+@media ( min-width: 768px ) {
+    main.courses .content{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+}
 main.courses .content .course
 {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+}
+main.courses .content .course .txt
+{
+    flex-grow: 1;
 }
 main.courses .content .course .image .cover
 {

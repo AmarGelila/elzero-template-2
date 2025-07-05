@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="page">
+
+        <aside class="shadow p-relative bg-white">
+            <h2 class="pad-15 wid-100 p-relative">Elzero</h2>
+            <ul class="no-list-style pad-15">
+                <li> <a href="index.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">dashboard</i> Dashboard</a> </li>
+                <li> <a href="settings.html" class="active ds-flx ali-c bg-white  pad-15 main-rad"> <i class="material-icons mar-ri-10">settings</i> Settings </a> </li>
+                <li> <a href="profile.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">person</i> Profile </a> </li>
+                <li> <a href="project.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">hub</i> Projects </a> </li>
+                <li> <a href="courses.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">school</i> Courses </a> </li>
+                <li> <a href="friends.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">group</i> Friends </a> </li>
+                <li> <a href="files.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">file_copy</i> Files </a> </li>
+                <li> <a href="plans.html" class="ds-flx ali-c bg-white pad-15 main-rad"> <i class="material-icons mar-ri-10">checklist</i> Plans </a> </li>
+            </ul>
+        </aside>
+
+        <main class="settings flx-1">
+            <header class="pad-15 ds-flx ali-c jus-s-b bg-white">
+                <div class="search ds-flx ali-c p-relative">
+                    <input type="search" placeholder="Type a keyword" class="main-rad">
+                </div>
+                <div class="info">
+                    <i class="material-symbols-outlined p-relative mar-ri-10">notifications</i>
+                    <img src="media/avatar.png" alt="profile">
+                </div>
+            </header>
+            <section class="pad-15 bg-gray">
+                <h1 class="p-relative pad-b-10 main-heading">Dashboard</h1>
+                <div class="content">
+                    <div class="control bg-white main-rad pad-15">
+                        <h3 class="mar-bt-10">Site Control</h3>
+                        <p>Control The Website If There Is Maintenance</p>
+                        <div class="on-off mar-to-20 mar-bt-20 ds-flx jus-s-b ali-c">
+                            <div class="txt">
+                                <h5 class="mar-bt-10">Website Control</h5>
+                                <p>Open/Close Website And Type The Reason</p>
+                            </div>
+                            <div class="check-box p-relative">
+                                <input type="checkbox" name="on-off" checked>
+                            </div>
+                        </div>
+                        <textarea name="cloes reasons" placeholder="Close message content" class="pad-15 wid-100 main-rad "></textarea>
+                    </div>
+
+                    <div class="general-info bg-white pad-15 main-rad">
+                        <h3 class="mar-bt-10">General Info</h3>
+                        <p class="mar-bt-20">General Information About Your Account</p>
+                        <form action="">
+                            <label for="first-name" class="ds-block mar-bt-10">First Name</label>
+                            <input type="text" name="name" id="first-name" placeholder="First Name" class="ds-block wid-100 mar-bt-20 pad-inpt" >
+                            <label for="first-name" class="ds-block mar-bt-10">Last Name</label>
+                            <input type="text" name="name" id="last-name" placeholder="Last Name" class="ds-block wid-100 mar-bt-20 pad-inpt" >
+                            <label for="email" class="ds-block mar-bt-10">Email</label>
+                            <div class="email wid-100 ds-flx ali-c jus-s-b mar-bt-20">
+                                <input type="mail" name="name" id="email" placeholder="merogelia@gmail.com" class="flx-1 pad-inpt" disabled>
+                                <a href="#" class="mar-lf-10">Change</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="security bg-white pad-15 main-rad">
+                        <h3 class="mar-bt-10">Security Info</h3>
+                        <p class="mar-bt-10">Security Information About Your Account</p>
+                        <div class="cont ds-flx jus-s-b ali-c pad-b-10 pad-to-20 mar-to-10">
+                            <div class="txt">
+                                <h4 class="mar-bt-10">Password</h4>
+                                <p>Last Change On 25/10/2021</p>
+                            </div>
+                            <a href="#" class="button">Change</a>
+                        </div>
+                        <div class="cont ds-flx jus-s-b ali-c pad-b-10 pad-to-20 mar-to-10">
+                            <div class="txt mar-ri-5">
+                                <h4 class="mar-bt-10">Two-Factor Authentication</h4>
+                                <p>Enable/Disable The Feature</p>
+                            </div>
+                            <div class="check-box p-relative">
+                                <input type="checkbox" name="on-off" checked>
+                                <div class="check p-relative"></div>
+                            </div>
+                        </div>
+                        <div class="cont ds-flx jus-s-b ali-c pad-b-10 pad-to-20 mar-to-10">
+                            <div class="txt">
+                                <h4 class="mar-bt-10">Devices</h4>
+                                <p>Check The Login Devices List</p>
+                            </div>
+                            <a href="#" class="sec-bg-gray pad-inpt rad-5">Devices</a>
+                        </div>
+                    </div>
+
+                    <div class="social-info pad-15 bg-white main-rad">
+                        <h3 class="mar-bt-10">Social Info</h3>
+                        <p class="mar-bt-20">Social Media Information</p>
+                        <form action="">
+                            <div class="field p-relative mar-bt-20">
+                                <input type="text" name="" id="" class="pad-inpt bg-gray wid-100" placeholder="Facebook Username">
+                            </div>
+                            <div class="field p-relative mar-bt-20">
+                                <input type="text" name="" id="" class=" pad-inpt bg-gray wid-100" placeholder="Twitter Username">
+                            </div>
+                            <div class="field p-relative mar-bt-20">
+                                <input type="text" name="" id="" class=" pad-inpt bg-gray wid-100" placeholder="Youtube Username">
+                            </div>
+                            <div class="field p-relative mar-bt-20">
+                                <input type="text" name="" id="" class=" pad-inpt bg-gray wid-100" placeholder="LinkedIn Username">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widgets-control pad-15 bg-white main-rad">
+                        <h3 class="mar-bt-10">Widgets Control</h3>
+                        <p class="mar-bt-20">Show/Hide Widgets</p>
+                        <form action="">
+                            
+                            <input type="checkbox" name="" id="draft" class="mar-bt-10 mar-ri-10" checked >
+                            <label for="draft" class="mar-bt-20">Quick Draft</label><br>
+                            <input type="checkbox" name="" id="targets" class="mar-bt-10 mar-ri-10" checked >
+                            <label for="targets" class="mar-bt-20">Yearly Targets</label><br>
+                            <input type="checkbox" name="" id="tickets" class="mar-bt-10 mar-ri-10" checked >
+                            <label for="tickets" class="mar-bt-20">Tickets Statistics</label><br>
+                            <input type="checkbox" name="" id="news" class="mar-bt-10 mar-ri-10" checked >
+                            <label for="news" class="mar-bt-20">Latest News</label><br>
+                            <input type="checkbox" name="" id=""tasks class="mar-bt-10 mar-ri-10">
+                            <label for="tasks" class="mar-bt-20">Latest Tasks</label><br>
+                            <input type="checkbox" name="" id="search" class="mar-bt-10 mar-ri-10" checked >
+                            <label for="search" class="mar-bt-20">Top Search Items</label><br>
+                        </form> 
+                    </div>
+
+                    <div class="backup pad-15 bg-white main-rad">
+                        <h3 class="mar-bt-10">Backup Manager</h3>
+                        <p class="mar-bt-20">Control Backup Time And Location</p>
+                        <form action="" class="mar-bt-20"> 
+                            <input type="radio" name="Time" id="daily" class="mar-ri-5" checked>
+                            <label for="daily" class="mar-bt-10">Daily</label><br>
+                            <input type="radio" name="Time" id="weekly" class="mar-ri-5">
+                            <label for="weekly" class="mar-bt-10">Weekly</label><br>
+                            <input type="radio" name="Time" id="monthly" class="mar-ri-5">
+                            <label for="monthly" class="mar-bt-10">Monthly</label><br>
+                        </form>
+                        <form action="" class="mar-bt-20 pad-b-20 pad-to-20">
+                            <div class="server ds-flx dir-c ali-c pad-b-10 pad-to-10">
+                                <input type="radio" name="server" id="mega" class="pad-15 wid-100  txt-alin-c">
+                                <label for="mega" class="wid-100  txt-alin-c">Megaman</label>
+                            </div>
+                            <div class="server ds-flx dir-c ali-c pad-b-10 pad-to-10">
+                                <input type="radio" name="server" id="zero" class="pad-15 wid-100  txt-alin-c" checked>
+                                <label for="zero" class="wid-100  txt-alin-c">Zero</label>
+                            </div>
+                            <div class="server ds-flx dir-c ali-c pad-b-10 pad-to-10">
+                                <input type="radio" name="server" id="segma" class="pad-15 wid-100  txt-alin-c">
+                                <label for="segma" class="wid-100  txt-alin-c">Segma</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>
+

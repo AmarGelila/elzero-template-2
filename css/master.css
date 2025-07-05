@@ -1,0 +1,1489 @@
+/* ALL PAGES */
+:root
+{
+    --main-bg: #f6f6f6;
+    --main-trans: .5s ease-in-out;
+    --main-rad: 10px;
+    --main-bord: 1px solid var(--sec-bg);
+    --gray-color: #888;
+    --sec-bg: #eee;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+}
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    font-family: "Open Sans" ,sans-serif;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-track
+{
+    background-color: var(--sec-bg);
+}
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+a
+{
+    text-decoration: none;
+}
+input,textarea
+{
+    border: var(--main-bord);
+    outline: none;
+    border-radius: 5px;
+}
+input:disabled
+{
+    background-color: var(--sec-bg);
+}
+::placeholder
+{
+    font-size: 13px;
+}
+.check-box input
+{
+    appearance: none;
+    position: relative;
+    width: 70px;
+    height: 20px;
+    border-radius: 15px;
+    z-index: 100;
+    border: none;
+}
+.check-box:has(input[type="checkbox"])::before
+{
+    font-family: "Material Icons";
+    content: "cancel";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 100%;
+    border-radius: 15px;
+    background-color: #bbb;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-right: 1px;
+}
+.check-box:has(input[type="checkbox"]:checked)::before
+{
+    content: "check_circle";
+    background-color: var(--blue-color);
+    justify-content: right;
+}
+
+
+.page
+{
+    display: flex;
+}
+
+.page aside
+{
+    z-index: 5;
+    width: 150px;
+    height: 100vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+.page aside h2
+{
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 auto 30px;
+    font-size: 20px;
+}
+.page aside h2::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: black;
+    width: 100%;
+}
+.page aside h2::after
+{
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: black;
+}
+
+.page aside ul li a
+{
+    font-weight: 500;
+    font-size: 13px;
+    color: black;
+    transition: var(--main-trans);
+}
+.page aside ul li a:hover
+,.page aside ul li a.active
+{
+    background-color: var(--main-bg);
+}
+.page aside ul li a i
+{
+    font-size: 20px;
+}
+@media (max-width: 992px)
+{
+    .page aside ul li a
+    {
+        font-size: 10px;
+        flex-direction: column;
+    }
+    .page aside ul li:first-child a
+    {
+        font-size: 7px;
+    }
+    .page aside ul li a i
+    {
+        margin: 0 0 10px;
+        font-size: 15px;
+    }
+
+    .page aside
+    {
+        width: 70px;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .page aside h2
+    {
+        font-size: 13px;
+    }
+}
+
+.page main header .search::before
+{
+    font-family: "Material Icons";
+    content: "search";
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 20px;
+    color: var(--blue-color);
+}
+.page main header .search input
+{
+    width: 180px;
+    padding: 5px 5px 5px 30px;
+    outline: none;
+    border: var(--main-bord);
+    transition: var(--main-trans);
+}
+.page main header .search input:focus
+{
+    border-color: var(--blue-color);
+    width: 200px;
+}
+.page main header .search input::placeholder
+{
+    font-size: 13px;
+}
+.page main header .info i::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    transform: translateY(-70%);
+}
+.page main .info img
+{
+    width: 30px;
+}
+main section .content h3
+{
+    font-size: 30px;
+}
+@media (max-width: 767px)
+{
+    main section .content h3
+    {
+        font-size: 25px;
+    }
+}
+@media (max-width: 767px)
+{
+    main section .content h4
+    {
+        font-size: 13px;
+    }
+}
+main section .content p
+{
+    color: var(--gray-color);
+    font-size: 15px;
+}
+@media (max-width: 767px)
+{
+    main section .content p
+    {
+        font-size: 11px;
+    }
+}
+span.level
+{
+    width: 150px;
+}
+span.level::before
+,span.level::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7px;
+    border-radius: 7px;
+}
+span.level::after
+{
+    width: 100%;
+    background-color: var(--sec-bg);
+}
+/* ALL PAGES */
+
+
+main.dashboard section .content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap: 30px;
+}
+@media (min-width: 768px)
+{
+    main.dashboard section .content
+    {
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+}
+/* INTRO */
+main.dashboard section .content .intro .head
+{
+    background-color: var(--sec-bg);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+main.dashboard section .content .intro .head > img:first-of-type
+{
+    max-width: 50%;
+}
+main.dashboard section .content .intro .head > img:last-of-type
+{
+    display: block;
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    border: 5px solid white;
+}
+
+main.dashboard section .content .intro .data
+{
+    margin-top: 70px;
+    border-top: var(--main-bord);
+}
+main.dashboard section .content .intro .link
+{
+    border-top: var(--main-bord);
+    text-align: right;
+}
+
+/* INTRO */
+
+
+/* DRAFT */
+main.dashboard section .content .draft form *
+{
+    outline: none;
+    border: none;
+}
+main.dashboard section .content .draft form input
+{
+    height: 50px;
+}
+main.dashboard section .content .draft form textarea
+{
+    height: 200px;
+    resize: none;
+}
+/* DRAFT */
+/* TARGETS */
+main.dashboard section .content .targets .target i
+{
+    padding: 20px 30px;
+    background-color: var(--sec-bg);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+main.dashboard section .content .targets .target:first-of-type i
+{
+    color: var(--blue-color)
+}
+main.dashboard section .content .targets .target:nth-of-type(2) i
+{
+    color: var(--orange-color);
+}
+main.dashboard section .content .targets .target:last-child i
+{
+    color: var(--green-color);
+}
+main.dashboard section .content .targets .target .cont span
+{
+    height: 5px;
+}
+main.dashboard section .content .targets .target .cont span::before
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -35px;
+    border-radius:3px;
+    width: 30px;
+    height: 20px;
+    padding: 3px 5px;
+    transform: translateX(-50%);
+    color: white;
+}
+main.dashboard section .content .targets .target:first-of-type .cont span::before
+{
+    content: "80%";
+    left: 80%;
+    background-color: var(--blue-color);
+}
+main.dashboard section .content .targets .target:nth-of-type(2) .cont span::before
+{
+    content: "55%";
+    left: 55%;
+    background-color: var(--orange-color);
+}
+main.dashboard section .content .targets .target:last-of-type .cont span::before
+{
+    content: "70%";
+    left: 70%;
+    background-color: var(--green-color);
+}
+main.dashboard section .content .targets .target .cont span::after
+{
+    content: "";
+    position: absolute;
+    top: -10px;
+    border-radius:3px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    transform: translateX(-50%);
+    color: white;
+}
+main.dashboard section .content .targets .target:first-of-type .cont span::after
+{
+    left: 80%;
+    border-top-color: var(--blue-color);
+}
+main.dashboard section .content .targets .target:nth-of-type(2) .cont span::after
+{
+    left: 55%;
+    border-top-color: var(--orange-color);
+}
+main.dashboard section .content .targets .target:last-of-type .cont span::after
+{
+    left: 70%;
+    border-top-color: var(--green-color);
+}
+
+main.dashboard section .content .targets .target:first-of-type .cont span
+{
+    background-image: linear-gradient(to right , var(--blue-color) 80% , var(--sec-bg) 80%);
+}
+main.dashboard section .content .targets .target:nth-of-type(2) .cont span
+{
+    background-image: linear-gradient(to right , var(--orange-color) 55% , var(--sec-bg) 55%);
+}
+main.dashboard section .content .targets .target:last-of-type .cont span
+{
+    background-image: linear-gradient(to right , var(--green-color) 70% , var(--sec-bg) 70%);
+}
+/* TARGETS */
+
+/* TICKETS */
+main.dashboard section .content .stats .cont
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(47%,1fr));
+    gap: 15px;
+}
+main.dashboard section .content .stats .cont .stat
+{
+    border: var(--main-bord);
+}
+main.dashboard section .content .stats .cont .stat i
+{
+    font-size: 30px;
+}
+main.dashboard section .content .stats .cont .stat:first-child i
+{
+    color: var(--orange-color);
+}
+main.dashboard section .content .stats .cont .stat:nth-child(2) i
+{
+    color: var(--blue-color);
+}
+main.dashboard section .content .stats .cont .stat:nth-child(3) i
+{
+    color: var(--green-color);
+}
+main.dashboard section .content .stats .cont .stat:last-child i
+{
+    color: red;
+}
+main.dashboard section .content .stats .cont .stat h4
+{
+    font-size: 25px;
+}
+/* TICKETS */
+/* NEWS */
+
+/* NEWS */
+main.dashboard section .content .news .cont .new:not(:first-child)
+{
+    border-top: var(--main-bord);
+}
+main.dashboard section .content .news .cont .new > img
+{
+    width: 100px;
+}
+main.dashboard section .content .news .cont .new .txt
+{
+    flex-grow: 1;
+}
+main.dashboard section .content .news .cont .new span
+{
+    font-size: 13px;
+    background-color: var(--sec-bg);
+    justify-self: right;
+    padding: 5px 10px;
+}
+
+/* TASKS */
+main.dashboard section .content .tasks .task:not(:last-child)
+{
+    border-bottom: var(--main-bord);
+}
+main.dashboard section .content .tasks .task.completed
+{
+    opacity: .3;
+}
+main.dashboard section .content .tasks .task.completed .txt
+{
+    text-decoration: line-through;
+}
+main.dashboard section .content .tasks .task i
+{
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+main.dashboard section .content .tasks .task i:hover
+{
+    color: red;
+}
+/* TASKS */
+/* SEARCH */
+main.dashboard section .content .search .items .head >*
+{
+    color: var(--gray-color);
+    font-size: 17px;
+    font-weight: 600;
+}
+main.dashboard section .content .search .items .item p
+{
+    color: unset;
+    font-weight: 500;
+    font-size: 20px;
+}
+main.dashboard section .content .search .items .item span
+,main.dashboard section .content .uploads .files .file span
+{
+    background-color: var(--sec-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+/* SEARCH */
+/* UPLOADS */
+main.dashboard section .content .files .file:not(:last-child)
+{
+    border-bottom: var(--main-bord);
+}
+main.dashboard section .content .uploads .files .file > img
+{
+    width: 45px;
+}
+main.dashboard section .content .uploads .files .file .txt
+{
+    flex-grow: 1;
+}
+/* UPLOADS */
+/* PROJECTS PROGRSS */
+main.dashboard section .content .project-progress .cont img
+{
+    max-width: 30%;
+    align-self: flex-end;
+    opacity: .5;
+}
+@media (max-width: 767px)
+{
+    main.dashboard section .content .project-progress .cont img
+    {
+        max-width: 20%;
+    }
+}
+main.dashboard section .content .project-progress .cont ul
+{
+    flex-grow: 1;
+}
+main.dashboard section .content .project-progress .cont ul li
+{
+    padding-left: 40px;
+}
+main.dashboard section .content .project-progress .cont ul li::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: radial-gradient(circle at center , var(--blue-color) 50% , white 50% , white 60% , var(--blue-color)60% , var(--blue-color) 100% );
+    border-radius: 50%;
+    margin-top: 10px;
+    z-index: 2;
+}
+main.dashboard section .content .project-progress .cont ul li:last-child::before
+{
+    background-image: radial-gradient(circle at center , white 60% , var(--blue-color)60% , var(--blue-color) 100% )
+}
+main.dashboard section .content .project-progress .cont ul li:not(:last-child)::after
+{
+    content: "";
+    position: absolute;
+    bottom: -20x;
+    left: 15px;
+    width: 3px;
+    height: 50px;
+    background-color: var(--blue-color);
+}
+main.dashboard section .content .project-progress .cont ul li:nth-child(4)::before
+{
+    animation: ongoing 5s infinite;
+    transition: var(--main-trans);
+}
+@keyframes ongoing {
+    0% ,30% ,50% ,70% , 90%
+    {
+        background-image: radial-gradient(circle at center , var(--blue-color) 50% , white 50% , white 60% , var(--blue-color)60% , var(--blue-color) 100% );
+    }
+    20% ,40% ,60% ,80% ,100%
+    {
+        background-image: radial-gradient(circle at center , white 60% , var(--blue-color)60% , var(--blue-color) 100% )
+    }
+}
+/* PROJECTS PROGRSS */
+/* REMINDERS */
+main.dashboard section .content .reminders li
+{
+    padding-left: 38px;
+}
+main.dashboard section .content .reminders ul li p
+{
+    font-size: 13px;
+}
+main.dashboard section .content .reminders ul li::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+main.dashboard section .content .reminders ul li:first-child::before
+{
+    background-color: var(--blue-color);
+}
+main.dashboard section .content .reminders ul li:nth-child(2)::before
+{
+    background-color: var(--green-color);
+}
+main.dashboard section .content .reminders ul li:nth-child(3)::before
+{
+    background-color: var(--orange-color);
+}
+main.dashboard section .content .reminders ul li:last-child::before
+{
+    background-color: red;
+}
+main.dashboard section .content .reminders ul li::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 3px;
+    height: 100%;
+}
+main.dashboard section .content .reminders ul li:first-child::after
+{
+    background-color: var(--blue-color);
+}
+main.dashboard section .content .reminders ul li:nth-child(2)::after
+{
+    background-color: var(--green-color);
+}
+main.dashboard section .content .reminders ul li:nth-child(3)::after
+{
+    background-color: var(--orange-color);
+}
+main.dashboard section .content .reminders ul li:last-child::after
+{
+    background-color: red;
+}
+/* REMINDERS */
+/* POST */
+main.dashboard section .content .latest-post .info
+,main.dashboard section .content .latest-post > p
+{
+    border-bottom: var(--main-bord);
+}
+main.dashboard section .content .latest-post .info img
+{
+    width: 50px;
+}
+main.dashboard section .content .latest-post > p
+{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+/* POST */
+/* SOCIAL */
+main.dashboard section .content .social .twitter
+{
+    background-color: rgba(54, 159, 245, 0.2);
+}
+main.dashboard section .content .social .facebook
+{
+    background-color: rgba(32, 36, 255, 0.2);
+}
+main.dashboard section .content .social .youtube
+{
+    background-color: rgba(245, 54, 54, 0.2);
+}
+main.dashboard section .content .social .linkedin
+{
+    background-color: rgba(0, 93, 168, 0.2);
+}
+main.dashboard section .content .social i
+{
+    padding: 15px;
+    color: white;
+    font-size: 30px;
+}
+main.dashboard section .content .social .twitter i
+{
+    background-color: rgba(54, 159, 245, 1);
+}
+main.dashboard section .content .social .facebook i
+{
+    background-color: rgba(32, 36, 255, 1);
+}
+main.dashboard section .content .social .youtube i
+{
+    background-color: rgba(245, 54, 54, 1);
+}
+main.dashboard section .content .social .linkedin i
+{
+    background-color: rgba(0, 93, 168, 1);
+}
+main.dashboard section .content .social .twitter a
+{
+    background-color: rgba(54, 159, 245, 1);
+}
+main.dashboard section .content .social .facebook a
+{
+    background-color: rgba(32, 36, 255, 1);
+}
+main.dashboard section .content .social .youtube a
+{
+    background-color: rgba(245, 54, 54, 1);
+}
+main.dashboard section .content .social .linkedin a
+{
+    background-color: rgba(0, 93, 168, 1);
+}
+main.dashboard section .content .social p
+{
+    flex-grow: 1;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+@media (max-width: 767px)
+{
+    main.dashboard section .content .social p
+    {
+        font-size: 15px;
+    }
+}
+/* SOCIAL */
+/* PROHECTS TABLE */
+main.dashboard section .projects
+{
+    width: calc(100vw - 115px);
+    overflow-x: scroll;
+    margin-top: 30px;
+}
+
+main.dashboard section .projects table
+{
+    width: 825px;
+    border: var(--main-bord);
+    border-spacing: 0;
+}
+
+@media ( min-width: 992px )
+{
+    main.dashboard section .projects
+    {
+        width: calc(100vw - 195px);
+    }
+    main.dashboard section .projects table
+    {
+        width: 100%;
+    }
+}
+
+main.dashboard section .projects table tr:hover td
+{
+    background-color: #eee;
+}
+main.dashboard section .projects table td
+{
+    transition: var(--main-trans);
+    border-right: var(--main-bord);
+    border-bottom: var(--main-bord);
+    text-wrap: nowrap;
+}
+main.dashboard section .projects table td img
+{
+    width: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+main.dashboard section .projects table td img:nth-child(2)
+{
+    transform: translateX(-15px);
+}
+main.dashboard section .projects table td img:nth-child(3)
+{
+    transform: translateX(-30px);
+}
+main.dashboard section .projects table td img:nth-child(4)
+{
+    transform: translateX(-45px);
+}
+main.dashboard section .projects table td .completed
+{
+    background-color: var(--green-color);
+}
+main.dashboard section .projects table td .ongoing
+{
+    background-color: var(--blue-color);
+}
+main.dashboard section .projects table td .rejected
+{
+    background-color: red;
+}
+main.dashboard section .projects table td .pending
+{
+    background-color: var(--orange-color);
+}
+/* PROHECTS TABLE */
+/* END INDEX */
+
+/* START SETTINGS */
+main.settings section .content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+@media (min-width: 600px)
+{
+    main.settings section .content
+    {
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    }
+}
+
+main.settings section .content .control textarea
+{
+    resize: none;
+    height: 200px;
+    border: var(--main-bord);
+}
+main.settings section .content .control textarea:focus
+{
+    border-color: var(--blue-color);
+}
+main.settings .content .general-info form .email a
+{
+    color: var(--blue-color);
+}
+main.settings .content .general-info form .email input
+{
+    min-width: 165px;
+} 
+main.settings section .content  .security .cont:not(:first-of-type)
+{
+    border-top: var(--main-bord);
+}
+main.settings section .content  .security .cont:last-of-type a:visited
+{
+    color: unset;
+}
+main.settings section .content .social-info form input
+{
+    padding-left: 50px;
+    height: 40px;
+}
+main.settings section .content .social-info form .field
+{
+    height: fit-content;
+}
+main.settings section .content .social-info form .field::before
+{
+    font-family: "Material Icons";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    padding: 0px 8px;
+    height: 40px;
+    width: 25px;
+    color: #888;
+    border-right: var(--main-bord);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-trans);
+}
+main.settings section .content .social-info form  .field:has( input:focus)::before
+{
+    color: var(--blue-color);
+}
+main.settings section .content .social-info form .field:first-child::before
+{
+    content: "groups";
+}
+main.settings section .content .social-info form .field:nth-child(2)::before
+{
+    content: "rocket_launch";
+}
+main.settings section .content .social-info form .field:nth-child(3)::before
+{
+    content: "smart_display";
+}
+main.settings section .content .social-info form .field:last-child::before
+{
+    content: "call";
+}
+main.settings section .content .widgets-control form input
+{
+    width: 20px;
+    height: 20px;
+    border-color: var(--blue-color);
+    outline-color: var(--blue-color);
+}
+
+main.settings section .content .backup form
+{
+    font-size: 18px;
+}
+main.settings section .content .backup form label
+{
+    display: inline-block;
+}
+main.settings section .content .backup form:first-of-type input[type="radio"]
+{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    color: white;
+    border: 3px solid white;
+    outline: 2px solid var(--blue-color);
+    border-radius: 50%;
+}
+main.settings section .content .backup form:first-of-type input[type="radio"]:checked
+{
+    background-color: var(--blue-color);
+}
+main.settings section .content .backup form:first-of-type input[type="radio"]
+{
+    background-color: transparent;
+}
+main.settings section .content .backup form:last-of-type
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 15px;
+    border-top: var(--main-bord);
+}
+main.settings section .content .backup form:last-of-type .server
+{
+    border: var(--main-bord);
+    border-radius: 10px;
+}
+main.settings section .content .backup form:last-of-type .server:has(input:checked)
+{
+    border-color: var(--blue-color);
+}
+main.settings section .content .backup form:last-of-type .server input[type="radio"]
+{
+    appearance: none;
+    position: relative;
+    border: none;
+}
+main.settings section .content .backup form:last-of-type .server input[type="radio"]::before
+{
+    font-family: "Material Icons";
+    content: "dns";
+    font-size: 35px;
+    color: black;
+}
+main.settings section .content .backup form:last-of-type .server input[type="radio"]:checked::before
+,main.settings section .content .backup form:last-of-type .server input[type="radio"]:checked+label
+{
+    color: var(--blue-color);
+}
+/* END SETTINGS */
+/* PROFILE */
+main.profile section .content .information
+{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    width: 100%;
+}
+@media (max-width: 768px)
+{
+    main.profile section .content .information
+    {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px)
+{
+    main.profile section .content .information
+    {
+        align-items: stretch;
+    }
+}
+main.profile section .content .main-info
+{
+    border-right: var(--main-bord);
+}
+main.profile section .content .main-info img
+{
+    width: 90px;
+    border-radius: 50%;
+}
+main.profile .content .main-info h3
+{
+    font-size: 20px;
+}
+main.profile section .content .main-info p:last-child
+{
+    font-size: 13px;
+}
+main.profile section .content .main-info .stars i
+{
+    color: gold;
+}
+main.profile section .content .main-info span.level::before
+{
+    width: 50px;
+    background-color: var(--blue-color);
+    z-index: 1;
+}
+main.profile .content .infos .info
+{
+    transition: var(--main-trans);
+}
+main.profile .content .infos .info:hover
+{
+    background-color: var(--main-bg);
+}
+main.profile .content .infos .info:not(:last-child)
+{
+    border-bottom: var(--main-bord);
+}
+main.profile .content .infos h3
+{
+    color: var(--gray-color);
+    font-size: 15px;
+}
+main.profile .content .infos p span.value
+{
+    color: black;
+    font-weight: 500;
+}
+@media (max-width: 992px) and (min-width: 768px)
+{
+
+    main.profile .content .infos .info >*:not(.check-box)
+    {
+        flex-basis: 100%;
+    }
+}
+
+main.profile .content .skills
+{
+    width: 30%;
+}
+main.profile .content .skills ul li:not(:last-child)
+{
+    border-bottom: var(--main-bord);
+}
+main.profile .content .skills ul li span
+{
+    padding: 5px 7px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: var(--sec-bg);
+}
+main.profile .content .activities
+{
+    width: 68%;
+}
+main.profile .content .activities .activity:not(:last-child)
+{
+    border-bottom: var(--main-bord);
+}
+main.profile .content .activities .activity img
+{
+    width: 70px;
+}
+@media (max-width: 992px)
+{
+    main.profile .content .skills
+    ,main.profile .content .activities
+    {
+        width: 100%;
+    }
+}
+main.profile .content .check-box input
+{
+    height: 15px;
+    width: 60px;
+}
+main.profile .content .check-box:has(input[type="checkbox"])::before
+{
+    font-size: 19px;
+}
+/* PROFILE */
+/* PROJECTS */
+main.projects .content .project > p
+{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+main.projects .content .project .txt h5
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+main.projects .content .project .members
+{
+    border-bottom: var(--main-bord);
+}
+main.projects .content .project .members img
+{
+    width: 45px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+main.projects .content .project .members img:not(:first-child)
+{
+    margin-left: -20px;
+}
+main.projects .content .project .skills
+{
+    border-bottom: var(--main-bord);
+}
+@media (max-width: 768px)
+{ 
+    main.projects .content .project .skills span
+    {
+        margin: 10px auto 0 10px;
+        width: fit-content;
+    }
+}
+
+main.projects .content .project .skills span
+{
+    background-color: var(--sec-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+}
+main.projects .content .project .progress .level.green::before
+{
+    background-color: var(--green-color);
+    width: 70%;
+    z-index: 1;
+}
+main.projects .content .project .progress .level.completed::before
+{
+    background-color: var(--blue-color);
+    width: 100%;
+    z-index: 1;
+}
+main.projects .content .project .progress .level.red::before
+{
+    width: 15%;
+    background-color: red;
+    z-index: 1;
+}
+@media (max-width: 768px)
+{
+    main.projects .content .project .progress .level
+    {
+        width: 100%;
+    }   
+}
+/* PROJECTS */
+/* COURSES */
+main.courses .content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}
+main.courses .content .course
+{
+    overflow: hidden;
+}
+main.courses .content .course .image .cover
+{
+    width: 100%;
+}
+main.courses .content .course .image .avatar
+{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 45px;
+}
+main.courses .content .course .txt p
+{
+    line-height: 1.5;
+}
+main.courses .content .course .info 
+{
+    border-top: var(--main-bord);
+}
+main.courses .content .course .info span
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+}
+/* COURSES */
+/* FRINEDS */
+main.friends .content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+main.friends .content .friend .info img
+{
+    width: 130px;
+    border-radius: 50%;
+}
+main.friends .content .friend .contact
+{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+main.friends .content .friend .contact i
+{
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 50%;
+    color: var(--gray-color);
+    transition: var(--main-trans);
+}
+main.friends .content .friend .contact i:hover
+{
+    color: white;
+    background-color: var(--blue-color);
+}
+main.friends .content .friend .data
+{
+    border-top: var(--main-bord);
+    border-bottom: var(--main-bord);
+}
+main.friends .content .friend .data p
+{
+    color: black;
+    font-weight: 500;
+}
+@media (max-width: 768px)
+{
+    main.friends .content .friend .date .buttons
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+main.friends .content .friend .date .buttons .remove
+{
+    background-color: red;
+}
+main.friends .content .friend .date p
+{
+    font-size: 13px;
+}
+/* FRINEDS */
+/* FILES */
+main.files .content .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 15px;
+    width: 70%;
+}
+main.files .content .stats
+{
+    width: calc(30% - 30px);
+}
+@media (max-width: 992px)
+{
+    main.files .content .container
+    {
+        width: 100%;
+    }
+    main.files .content .stats
+    {
+        width: 100%;
+        order: -1;
+    }
+}
+main.files .content .container .file i
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+main.files .content .container .file:hover i
+{
+    color: var(--blue-color);
+    animation: upAndDown 1s infinite;
+}
+main.files .content .container .file img
+{
+    transition: var(--main-trans);
+    width: 70px;
+}
+main.files .content .container .file:hover img
+{
+    transform: rotate(15deg);
+}
+main.files .content .container .file > p
+{
+    font-size: 17px;
+}
+main.files .content .container .file .data
+{
+    border-top: var(--main-bord);
+}
+main.files .content .stats 
+{
+    align-self: flex-start;
+}
+main.files .content .stats .stat i
+{
+    font-size: 25px;
+}
+main.files .content .stats .stat:first-of-type i
+{
+    color: var(--blue-color);
+}
+main.files .content .stats .stat:nth-of-type(2) i
+{
+    color: var(--orange-color);
+}
+main.files .content .stats .stat:nth-of-type(3) i
+{
+    color: var(--green-color);
+}
+main.files .content .stats .stat:nth-of-type(4) i
+{
+    color: red;
+}
+main.files .content .stats a
+{
+    background-color: var(--blue-color);
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+main.files .content .stats a:hover
+{
+    background-color: var(--blue-alt-color);
+}
+main.files .content .stats a:hover i
+{
+    animation: upAndDown 1s infinite;
+}
+@keyframes upAndDown {
+    0% ,30% ,70%
+    {
+        transform: translateY(0);
+    }
+    10% ,50% ,90%
+    {
+        transform: translateY(-5px);
+    }
+}
+/* FILES */
+/* PLANS */
+main.plans .content 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+
+@media (min-width: 800px){
+    main.plans .content 
+    {
+        grid-template-columns: repeat(auto-fill,minmax(275px,1fr));
+    }   
+}
+main.plans .content .plan .txt
+{
+    border: 3px solid white;
+}
+main.plans .content .plan ul li
+{
+    border-bottom: var(--main-bord);
+}
+main.plans .content .plan ul li p
+{
+    color: black;
+}
+main.plans .content .plan > p
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+main.plans .content .plan ul li i:last-child
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+main.plans .content .plan ul li i.green
+{
+    color: var(--green-color);
+    font-weight: 500;
+}
+main.plans .content .plan ul li i.red
+{
+    color: red;
+    font-weight: 500;
+}
+main.plans .content .plan a
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+main.plans .content .plan:first-child .txt
+{
+    background-color: var(--green-color);
+    outline: 3px solid var(--green-color);
+}
+main.plans .content .plan:first-child a
+{
+    background-color: var(--green-color);
+}
+main.plans .content .plan:nth-child(2) .txt
+{
+    background-color: var(--blue-color);
+    outline: 3px solid var(--blue-color);
+}
+main.plans .content .plan:nth-child(2) a
+{
+    background-color: var(--blue-color);
+}
+main.plans .content .plan:last-child .txt
+{
+    background-color: var(--orange-color);
+    outline: 3px solid var(--orange-color);
+}
+main.plans .content .plan:last-child a
+{
+    background-color: var(--orange-color);
+}
+/* PLANS */
